@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi pedido · BRASA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CORREGIDO: Apunta al CSS saliendo de la carpeta page -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a class="logo" href="index.html"><span>🍳</span>BRASA</a>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Descubrir</a></li>
+                    <li><a href="crear.html">Crear pedido</a></li>
+                    <li><a href="mis-pedidos.html" aria-current="page">Mis pedidos <span class="badge">2</span></a></li>
+                    <li><a href="perfil.html">Mi perfil</a></li>
+                </ul>
+            </nav>
+            <div class="club">
+                <strong>Brasa Club</strong>Te faltan 2 pedidos para conseguir un postre gratis.
+                <div class="barra"><i></i></div>
+            </div>
+            <a class="usuario" href="perfil.html">
+                <span class="avatar">AM</span>
+                <span>Alba Martín<br><small class="muted">Ver perfil</small></span>
+            </a>
+        </aside>
+
+        <div>
+            <header class="topbar">
+                <div class="entrega">
+                    <small>Entrega en</small>
+                    <strong>Calle de Alcalá, 85 · Madrid</strong>
+                </div>
+                <a class="btn-pedido" href="pedido.html">Mi pedido <span class="badge">1</span></a>
+            </header>
+
+            <main class="contenido">
+                <div style="max-width:520px;margin:auto">
+                    <p class="eyebrow">Tu selección</p>
+                    <h1>Mi pedido</h1>
+                    
+                    <section class="card" style="margin-top:var(--e3)">
+                        <div style="display:flex;gap:var(--e2);align-items:center">
+                            <!-- CORREGIDO: La imagen sale de la carpeta page -->
+                            <img src="../img/brasa-burger.jpg" alt="" width="64" height="64" style="border-radius:10px;object-fit:cover">
+                            <div style="flex:1">
+                                <b>1 × Brasa Burger</b><br>
+                                <small class="muted">Sin extra</small> 
+                                <a class="eyebrow" href="detalle.html">Editar</a>
+                            </div>
+                            <b>14,90 €</b>
+                        </div>
+
+                        <p class="card" style="background:var(--crema);margin:var(--e2) 0">
+                            <b>Entrega estimada</b><br>
+                            <small class="muted">20–30 minutos</small>
+                        </p>
+
+                        <div class="resumen">
+                            <div><span class="muted">Subtotal</span><span>14,90 €</span></div>
+                            <div><span class="muted">Envío</span><span>1,90 €</span></div>
+                            <div class="total"><span>Total</span><span>16,80 €</span></div>
+                        </div>
+
+                        <a class="btn btn-primary btn-block" href="mis-pedidos.html">Tramitar pedido →</a>
+                    </section>
+                </div>
+            </main>
+
+            <footer class="contenido muted">
+                <small>© 2026 BRASA · Proyecto de informática</small>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

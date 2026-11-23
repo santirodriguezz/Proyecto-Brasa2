@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi perfil · BRASA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Apunta al CSS saliendo de la carpeta page -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <a class="logo" href="index.html"><span>🍳</span>BRASA</a>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Descubrir</a></li>
+                    <li><a href="crear.html">Crear pedido</a></li>
+                    <li><a href="mis-pedidos.html">Mis pedidos <span class="badge">2</span></a></li>
+                    <li><a href="perfil.html" aria-current="page">Mi perfil</a></li>
+                </ul>
+            </nav>
+            <div class="club">
+                <strong>Brasa Club</strong>Te faltan 2 pedidos para conseguir un postre gratis.
+                <div class="barra"><i></i></div>
+            </div>
+            <a class="usuario" href="perfil.html">
+                <span class="avatar">AM</span>
+                <span>Alba Martín<br><small class="muted">Ver perfil</small></span>
+            </a>
+        </aside>
+
+        <div>
+            <header class="topbar">
+                <div class="entrega">
+                    <small>Entrega en</small>
+                    <strong>Calle de Alcalá, 85 · Madrid</strong>
+                </div>
+                <a class="btn-pedido" href="pedido.html">Mi pedido <span class="badge">1</span></a>
+            </header>
+
+            <main class="contenido">
+                <div style="max-width:800px;margin:auto">
+                    <p class="eyebrow">Tu cuenta</p>
+                    <h1>Mi perfil</h1>
+
+                    <header style="display:flex;gap:var(--e2);align-items:center;margin:var(--e3) 0;padding-bottom:var(--e3);border-bottom:1px solid var(--borde)">
+                        <span class="avatar">AM</span>
+                        <div>
+                            <h2>Alba Martín</h2>
+                            <small class="muted">Miembro de Brasa desde mayo de 2024</small>
+                        </div>
+                        <span class="tag" style="margin-left:auto">Brasa Club</span>
+                    </header>
+
+                    <div class="perfil-grid">
+                        <form class="card">
+                            <h2 style="margin-bottom:var(--e2)">Datos personales</h2>
+                            <div class="campo">
+                                <label for="n">Nombre completo</label>
+                                <input id="n" value="Alba Martín" required>
+                            </div>
+                            <div class="campo">
+                                <label for="e">Correo electrónico</label>
+                                <input id="e" type="email" value="santi@ejemplo.com" required>
+                            </div>
+                            <div class="campo">
+                                <label for="t">Teléfono</label>
+                                <input id="t" type="tel" value="+34 612 345 678" required>
+                            </div>
+                            <button class="btn">Guardar cambios</button>
+                        </form>
+
+                        <div style="display:grid;gap:var(--e2);align-content:start">
+                            <div class="kpi">
+                                <b>8</b>Pedidos realizados
+                                <p style="color:#9aa09b;font-size:.85rem">2 más para tu próximo premio</p>
+                            </div>
+                            <!-- El cierre de sesión sale de la carpeta page para ir al login exterior -->
+                            <a class="btn" href="../login.html" style="color:#b3361a">Cerrar sesión →</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="contenido muted">
+                <small>© 2026 BRASA · Proyecto de informática</small>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Enlace al JavaScript modular del Hito 2 -->
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* BRASA · Mobile first */
+:root{
+  --naranja:#ee5a29; 
+  --naranja-suave:#fff3ee; 
+  --carbon:#1e2321; 
+  --carbon-2:#2a302d;
+  --crema:#f8f6f1; 
+  --blanco:#fff; 
+  --texto:#1e2321; 
+  --gris:#6f736f; 
+  --borde:#e8e4dc; 
+  --verde:#1f6b4f;
+  --fuente:'DM Sans',system-ui,sans-serif;
+  --e1:.5rem; --e2:1rem; --e3:1.5rem; --e4:2rem; --radio:14px;
+}
+
+*{box-sizing:border-box;margin:0}
+
+body{font-family:var(--fuente);background:var(--crema);color:var(--texto);line-height:1.5}
+
+img{
+  max-width:100%;display:block
+}
+
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--naranja);outline-offset:2px}
+.eyebrow{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja);font-weight:700}
+h1{font-size:clamp(2rem,6vw,3.2rem);letter-spacing:-.03em;line-height:1.05;font-weight:500}
+h2{font-size:1.25rem;font-weight:500}
+.muted{color:var(--gris)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.25rem;border-radius:10px;border:1px solid var(--borde);background:var(--blanco);font:inherit;font-weight:700;cursor:pointer}
+.btn-primary{background:var(--naranja);border-color:var(--naranja);color:#fff;box-shadow:0 8px 20px -8px var(--naranja)}
+.btn-block{width:100%}
+.tag{font-size:.7rem;background:#efece5;color:var(--gris);padding:.25rem .7rem;border-radius:99px;font-weight:600}
+.card{background:var(--blanco);border:1px solid var(--borde);border-radius:var(--radio);padding:var(--e3)}
+
+
+/* Formularios */
+.campo{display:grid;gap:.4rem;margin-bottom:var(--e2)}
+.campo label{font-size:.85rem;font-weight:700}
+.campo input,.campo textarea{font:inherit;padding:.85rem 1rem;border:1px solid var(--borde);border-radius:10px;background:var(--crema);width:100%}
+.fila{display:grid;gap:var(--e2)}
+
+
+/* Shell de la app */
+.app{min-height:100vh}
+.sidebar{background:var(--carbon);color:#fff;padding:var(--e2);display:flex;flex-direction:column;gap:var(--e2)}
+.logo{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.2em}
+.logo span{background:var(--naranja);width:34px;height:34px;border-radius:9px;display:grid;place-items:center}
+.sidebar nav ul{list-style:none;padding:0;display:flex;gap:.25rem;overflow-x:auto}
+.sidebar nav a{display:flex;gap:.5rem;align-items:center;padding:.6rem .9rem;border-radius:10px;color:#b9bdb9;white-space:nowrap;font-weight:500}
+.sidebar nav a[aria-current="page"]{background:var(--carbon-2);color:#fff}
+.badge{background:var(--naranja);color:#fff;border-radius:99px;font-size:.7rem;padding:.05rem .45rem;font-weight:700}
+.club,.usuario{display:none}
+.club{background:var(--carbon-2);border-radius:var(--radio);padding:var(--e2);font-size:.8rem;color:#9aa09b}
+.club strong{color:#fff;display:block;font-size:.95rem}
+.barra{height:4px;background:#444a46;border-radius:9px;margin-top:.7rem}
+.barra i{display:block;height:100%;width:80%;background:var(--naranja);border-radius:9px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:var(--e2);padding:var(--e2);border-bottom:1px solid var(--borde)}
+.entrega small{display:block;font-size:.6rem;letter-spacing:.12em;color:var(--gris);text-transform:uppercase}
+.entrega strong{font-size:.8rem}
+.btn-pedido{background:var(--carbon);color:#fff;border-radius:10px;padding:.6rem 1rem;font-size:.8rem;font-weight:700;display:flex;gap:.6rem;align-items:center}
+.contenido{padding:var(--e3) var(--e2) var(--e4);max-width:1240px;margin:auto}
+.cabecera-pagina{display:grid;gap:var(--e2);margin-bottom:var(--e3)}
+
+
+/* Hero */
+.hero{position:relative;border-radius:20px;overflow:hidden;background:#000 url(../img/brasa-burger.jpg) right center/cover no-repeat;color:#fff;min-height:300px;display:flex;align-items:flex-end}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 15%,rgba(0,0,0,.2))}
+.hero>div{position:relative;padding:var(--e3);display:grid;gap:var(--e2);justify-items:start}
+.hero .precio{font-size:1.6rem;font-weight:700}
+
+
+/* Carta */
+.filtros{display:flex;gap:.25rem;background:#efece5;padding:.3rem;border-radius:10px;width:fit-content}
+.filtros a{padding:.4rem .9rem;border-radius:8px;font-size:.8rem;font-weight:700;color:var(--gris)}
+.filtros a[aria-current="true"]{background:#fff;color:var(--texto)}
+.grid-platos{display:grid;gap:var(--e2);grid-template-columns:1fr;margin-top:var(--e3)}
+.plato{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column}
+.plato img{aspect-ratio:2/1;object-fit:cover;width:100%}
+.plato-cuerpo{padding:var(--e2);display:grid;gap:.4rem;flex:1}
+.plato-pie{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--borde);padding-top:.8rem;margin-top:auto;font-weight:700}
+.mas{width:34px;height:34px;border-radius:8px;background:#efece5;display:grid;place-items:center;font-weight:700}
+
+
+/* Detalle */
+.detalle{display:grid;gap:var(--e3)}
+.detalle>img{border-radius:20px;width:100%;aspect-ratio:1;object-fit:cover}
+.opciones{border:0;padding:0;display:grid;gap:.6rem;margin:var(--e2) 0}
+.opcion{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--borde);background:#fff;border-radius:10px;padding:.9rem 1rem;cursor:pointer;font-size:.9rem}
+.opcion:has(input:checked){border-color:var(--naranja);background:var(--naranja-suave)}
+.compra{display:flex;gap:.8rem}
+.compra .btn-primary{flex:1;justify-content:space-between}
+.cantidad{display:flex;align-items:center;gap:.8rem;border:1px solid var(--borde);border-radius:10px;padding:0 .8rem;background:#fff}
+
+
+/* Pasos */
+.pasos{display:flex;align-items:center;justify-content:center;gap:.5rem;list-style:none;padding:0;margin:var(--e2) 0 var(--e3)}
+.pasos li{width:30px;height:30px;border-radius:50%;border:1px solid var(--borde);display:grid;place-items:center;font-size:.7rem;color:var(--gris)}
+.pasos li.activo{background:var(--naranja);color:#fff;border-color:var(--naranja)}
+.pasos hr{width:60px;border:0;border-top:1px solid var(--borde)}
+.opciones-tiempo{display:grid;gap:.8rem}
+.centrado{max-width:690px;margin:auto;text-align:center}
+.centrado .card,.centrado form{text-align:left}
+.centrado .card{margin-bottom:var(--e2)}
+
+
+/* Pedidos / perfil */
+.estado{background:var(--carbon);color:#fff;border-radius:var(--radio);padding:var(--e3);display:grid;gap:var(--e2)}
+.estado header{display:flex;justify-content:space-between;align-items:center}
+.estado ol{list-style:none;padding:0;display:flex;justify-content:space-between;font-size:.7rem;color:#9aa09b;border-bottom:1px solid #3a413d;padding-bottom:var(--e2)}
+.estado li.ok,.estado li.ahora{color:#fff}
+.hora{color:var(--naranja);font-size:1.4rem;font-weight:700}
+.lista{list-style:none;padding:0;display:grid;gap:.8rem;margin-top:var(--e2)}
+.lista li{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:var(--e2);display:flex;justify-content:space-between;gap:var(--e2)}
+.perfil-grid{display:grid;gap:var(--e2)}
+.avatar{width:64px;height:64px;border-radius:16px;background:#e5b8a0;display:grid;place-items:center;font-weight:700;color:#6b3a22}
+.kpi{background:var(--carbon);color:#fff;border-radius:var(--radio);padding:var(--e3)}
+.kpi b{display:block;font-size:2.5rem;color:#ff7a4d}
+.resumen{display:grid;gap:.5rem;margin:var(--e2) 0}
+.resumen div{display:flex;justify-content:space-between}
+.resumen .total{font-weight:700;border-top:1px solid var(--borde);padding-top:.6rem;font-size:1.1rem}
+
+
+/* Login / registro */
+.auth{min-height:100vh;display:grid}
+.auth-img{display:none;position:relative;background:#000 url(../img/brasa-burger.jpg) center/cover;color:#fff}
+.auth-img::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000 5%,transparent 70%)}
+.auth-img div{position:absolute;inset:auto 0 0;padding:var(--e4);display:grid;gap:var(--e1)}
+.auth main{padding:var(--e4) var(--e3);display:grid;align-content:center;max-width:460px;width:100%;margin:auto}
+.auth main h1{font-size:2.2rem;margin:.4rem 0}
+.auth form{margin:var(--e3) 0 var(--e2)}
+.auth-alt{display:grid;gap:.7rem;text-align:center;font-size:.85rem}
+.sep{text-align:center;font-size:.75rem;color:var(--gris);margin:var(--e2) 0}
+
+
+/* Tablet */
+@media (min-width:640px){
+  .grid-platos{grid-template-columns:repeat(2,1fr)}
+  .fila{grid-template-columns:1fr 1fr}
+  .opciones-tiempo{grid-template-columns:1fr 1fr}
+  .cabecera-pagina{grid-template-columns:1fr auto;align-items:end}
+  .perfil-grid{grid-template-columns:2fr 1fr}
+}
+
+
+/* Escritorio */
+@media (min-width:1024px){
+  .app{display:grid;grid-template-columns:220px 1fr}
+  .sidebar{position:sticky;top:0;height:100vh;padding:var(--e3) var(--e2)}
+  .sidebar nav ul{flex-direction:column;overflow:visible}
+  .club{display:block;margin-top:auto}
+  .usuario{display:flex;gap:.7rem;align-items:center;border-top:1px solid #3a413d;padding-top:var(--e2);font-size:.8rem}
+  .usuario .avatar{width:36px;height:36px;border-radius:10px;font-size:.7rem}
+  .grid-platos{grid-template-columns:repeat(4,1fr)}
+  .hero{min-height:420px}
+  .hero>div{padding:var(--e4) 3.5rem}
+  .detalle{grid-template-columns:1.1fr 1fr;align-items:start;gap:var(--e4)}
+  .auth{grid-template-columns:1.1fr 1fr}
+  .auth-img{display:block}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

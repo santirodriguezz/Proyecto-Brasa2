@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Crear pedido · BRASA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Apunta al CSS saliendo de la carpeta page -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <!-- Enlaces internos dentro de page -->
+    <a class="logo" href="index.html"><span>🍳</span>BRASA</a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Descubrir</a></li>
+        <li><a href="crear.html" aria-current="page">Crear pedido</a></li>
+        <li><a href="mis-pedidos.html">Mis pedidos <span class="badge">2</span></a></li>
+        <li><a href="perfil.html">Mi perfil</a></li>
+      </ul>
+    </nav>
+    <div class="club">
+      <strong>Brasa Club</strong>Te faltan 2 pedidos para conseguir un postre gratis.
+      <div class="barra"><i></i></div>
+    </div>
+    <a class="usuario" href="perfil.html">
+      <span class="avatar">AM</span>
+      <span>Alba Martín<br><small class="muted">Ver perfil</small></span>
+    </a>
+  </aside>
+
+  <div>
+    <header class="topbar">
+      <div class="entrega">
+        <small>Entrega en</small>
+        <strong>Calle de Alcalá, 85 · Madrid</strong>
+      </div>
+      <a class="btn-pedido" href="pedido.html">Mi pedido <span class="badge">1</span></a>
+    </header>
+
+    <main class="contenido">
+      <div class="centrado">
+        <p class="eyebrow">Nuevo pedido</p>
+        <h1>¿Dónde te lo llevamos?</h1>
+        <p class="muted">Completa los datos de entrega para continuar.</p>
+        <ol class="pasos">
+          <li class="activo">1</li><hr><li>2</li><hr><li>3</li>
+        </ol>
+
+        <form action="pedido.html">
+          <section class="card">
+            <h2 style="margin-bottom:var(--e2)">Datos de entrega</h2>
+            <div class="campo">
+              <label for="dir">Dirección</label>
+              <input id="dir" value="Calle de Alcalá, 85" required>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="piso">Piso / puerta</label>
+                <input id="piso" value="3º B">
+              </div>
+              <div class="campo">
+                <label for="cp">Código postal</label>
+                <input id="cp" value="28009" inputmode="numeric">
+              </div>
+            </div>
+            <div class="campo">
+              <label for="ind">Indicaciones para el repartidor</label>
+              <textarea id="ind" rows="3" placeholder="Ej. El telefonillo no funciona, llama al llegar."></textarea>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 style="margin-bottom:var(--e2)">¿Cuándo lo quieres?</h2>
+            <div class="opciones-tiempo">
+              <label class="opcion">
+                <span><b>Lo antes posible</b><br><small class="muted">20–30 minutos</small></span>
+                <input type="radio" name="cuando" checked>
+              </label>
+              <label class="opcion">
+                <span><b>Programar</b><br><small class="muted">Elige una hora</small></span>
+                <input type="radio" name="cuando">
+              </label>
+            </div>
+          </section>
+
+          <div style="text-align:right">
+            <button class="btn btn-primary">Continuar →</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="contenido muted"><small>© 2026 BRASA · Proyecto de informática</small></footer>
+  </div>
+</div>
+
+<!-- Enlace al JavaScript modular del Hito 2 -->
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

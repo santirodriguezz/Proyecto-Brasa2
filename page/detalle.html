@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brasa Burger · BRASA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- CORREGIDO: Apunta al CSS saliendo de la carpeta page -->
+<link rel="stylesheet" href="../css/styles.css"></head><body>
+<div class="app">
+<aside class="sidebar">
+<!-- CORREGIDO: Enlaces internos dentro de page -->
+<a class="logo" href="index.html"><span>🍳</span>BRASA</a>
+<nav aria-label="Principal"><ul>
+<li><a href="index.html" aria-current="page">Descubrir</a></li>
+<li><a href="crear.html">Crear pedido</a></li>
+<li><a href="mis-pedidos.html">Mis pedidos <span class=badge>2</span></a></li>
+<li><a href="perfil.html">Mi perfil</a></li>
+</ul></nav>
+<div class="club"><strong>Brasa Club</strong>Te faltan 2 pedidos para conseguir un postre gratis.<div class="barra"><i></i></div></div>
+<a class="usuario" href="perfil.html"><span class="avatar">AM</span><span>Alba Martín<br><small class="muted">Ver perfil</small></span></a></aside>
+<div>
+<header class="topbar"><div class="entrega"><small>Entrega en</small><strong>Calle de Alcalá, 85 · Madrid</strong></div>
+<a class="btn-pedido" href="pedido.html">Mi pedido <span class="badge">1</span></a></header>
+<main class="contenido">
+<article class="detalle">
+<!-- CORREGIDO: La imagen sale de la carpeta page -->
+<img src="../img/brasa-burger.jpg" alt="Brasa Burger con cuchillo clavado">
+<div>
+<p class="eyebrow">Hamburguesas · Favorita</p><h1>Brasa Burger</h1><p class="muted">★ 4,9 (128 reseñas) · 20–30 min</p>
+<p class="muted" style="margin:var(--e2) 0">180 g de carne madurada a la brasa, cheddar ahumado, cebolla confitada durante seis horas, pepinillo y nuestra salsa secreta en pan brioche tostado.</p>
+<p style="display:flex;gap:.5rem;flex-wrap:wrap"><span class="tag">Carne local</span><span class="tag">Pan artesano</span><span class="tag">Picante suave</span></p>
+<form action="pedido.html">
+<fieldset class="opciones"><legend style="font-size:1.1rem;margin:var(--e2) 0 .6rem">Hazla a tu manera <small class="muted">· Elige una opción</small></legend>
+<label class="opcion">Sin extra<input type="radio" name="extra" checked></label>
+<label class="opcion">Extra de cheddar · +1,50 €<input type="radio" name="extra"></label>
+<label class="opcion">Extra de bacon · +2,00 €<input type="radio" name="extra"></label>
+</fieldset>
+<div class="compra">
+<div class="cantidad"><button type="button" class="btn" style="border:0" aria-label="Menos">−</button>1<button type="button" class="btn" style="border:0" aria-label="Más">+</button></div>
+<button class="btn btn-primary">Añadir al pedido <span>14,90 €</span></button>
+</div>
+</form>
+</div>
+</article>
+</main>
+<footer class="contenido muted"><small>© 2026 BRASA · Proyecto de informática</small></footer>
+</div></div></body></html>

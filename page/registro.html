@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro · BRASA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Apunta al CSS saliendo de la carpeta page -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="auth">
+        <aside class="auth-img" aria-hidden="true">
+            <div>
+                <!-- El logo apunta al index dentro de page -->
+                <a class="logo" href="index.html" style="position:absolute;top:var(--e4);left:var(--e4)"><span>🍳</span>BRASA</a>
+                <p class="eyebrow" style="color:#f0a96b">Sabor que se recuerda</p>
+                <p style="font-size:3.5rem;line-height:1;letter-spacing:-.03em">Tu mesa favorita, ahora en casa.</p>
+                <p style="opacity:.8">Ingredientes honestos, fuego lento y pedidos que llegan justo a tiempo.</p>
+            </div>
+        </aside>
+
+        <main>
+            <p class="eyebrow">Únete a Brasa</p>
+            <h1>Crea tu cuenta</h1>
+            <p class="muted">Regístrate y haz tu primer pedido.</p>
+            
+            <!-- El formulario redirige al index dentro de page -->
+            <form action="index.html">
+                <div class="campo">
+                    <label for="nm">Nombre completo</label>
+                    <input id="nm" type="text" required>
+                </div>
+                <div class="campo">
+                    <label for="em">Correo electrónico</label>
+                    <input id="em" type="email" value="" required>
+                </div>
+                <div class="campo">
+                    <label for="pw">Contraseña</label>
+                    <input id="pw" type="password" value="" required>
+                </div>
+                <button class="btn btn-primary btn-block">Crear mi cuenta →</button>
+            </form>
+
+            <p class="sep">o continúa con</p>
+            <div class="auth-alt">
+                <!-- Botón de Google hacia el index de page -->
+                <a class="btn btn-block" href="index.html">G  Google</a>
+                <!-- Acceso admin hacia el index de page -->
+                <a class="btn btn-block" href="index.html" style="background:var(--crema);font-size:.8rem">Acceso de administrador</a>
+                
+                <p class="muted">¿Ya tienes cuenta? 
+                    <!-- Iniciar sesión sale de la carpeta page para ir al login exterior -->
+                    <a href="../login.html" style="color:var(--naranja);font-weight:700">Inicia sesión</a>
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Enlace al JavaScript modular del Hito 2 -->
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
